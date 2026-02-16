@@ -1,0 +1,14 @@
+prefix=/root/FFmpeg/android/arm64-v8a
+exec_prefix=${prefix}
+libdir=/root/FFmpeg/android/arm64-v8a/lib
+includedir=/root/FFmpeg/android/arm64-v8a/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 60.25.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -lm -lz -latomic -landroid -lmediandk -pthread
+Cflags: -I${includedir}

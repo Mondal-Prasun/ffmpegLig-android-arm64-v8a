@@ -1,0 +1,14 @@
+prefix=/root/FFmpeg/android/arm64-v8a
+exec_prefix=${prefix}
+libdir=/root/FFmpeg/android/arm64-v8a/lib
+includedir=/root/FFmpeg/android/arm64-v8a/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 9.3.100
+Requires: 
+Requires.private: libavutil >= 60.25.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}
